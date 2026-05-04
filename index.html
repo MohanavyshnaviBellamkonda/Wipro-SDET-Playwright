@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=<>, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          function Submit() {
+            const nameinputbox = document.getElementById("namebox"); 
+            console.log("Name:",nameinputbox.value);
+            nameinputbox.value = "";
+          }
+     </script>
+</head>
+<body>
+     <h1>My website</h1>
+     <p>This is new vweison of something</p>
+     <input id="namebox" type="text" placeholder="enter your name">
+     <button onclick="Submit()">Submit</button>
+</body>
+</html>
