@@ -1,0 +1,38 @@
+Javascript Promises and Asynchronous
+
+1.Synchronous :-
+  -It excectues one by one
+  -Excecutes in a sequential order(pro)
+  -2nd one will start only after the completion of first one(Con)
+
+2.Asynchronous :-
+  -Unlike Synchronous process, asynchronous helps us to run/excecutes in a specific/required order.
+
+
+PROMISES:-
+In promises there are only three states 
+1.Processing/pending
+2.Resolved
+3.Rejected
+
+Example code:
+function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data received");
+        }, 2000);
+    });
+}
+ 
+getData().then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.error("Error:", error);
+});
+
+then() and catch() blocks acts like try and catch blocks
+If we reolved the data,then data is recieved or if rejected we will get an error.
+
+setTimeout():- it it use to run a code after the few sec later, mention the time in code.
+
+setInterval():- it run the code after every interval of time.
