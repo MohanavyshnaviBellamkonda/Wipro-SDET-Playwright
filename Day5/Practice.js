@@ -12,16 +12,6 @@ async function fetchData(link) {
     }
 }
 
-async function getProducts() {
-    const data = await fetchData("https://fakestoreapi.com/products");
-
-    const filtered = data.filter(p => p.price > 100);
-
-    const total = filtered.reduce((sum, p) => sum + p.price, 0);
-
-    console.log("Products:", filtered);
-    console.log("Total Price:", total);
-}
 /*
 
 //API 1
@@ -33,21 +23,17 @@ async function main() {
     });
 }
 
-main();
 
 //API 2
 
 async function getPokemons() {
     const data = await fetchData("https://pokeapi.co/api/v2/pokemon");
 
-    const result = data.results
-        .filter(p => p.name.startsWith("b")) 
-        .map(p => ({
-            name: p.name.toUpperCase(),    
-            url: p.url
-        }));
+    const sorted = data.results
+        .map(p => p.name)
+        .sort();
 
-    console.log(result);
+    console.log(sorted);
 }
 
 //API 3
@@ -121,14 +107,21 @@ async function getYoungestUser() {
     );
 
     console.log("Youngest:", youngest.name.first, youngest.dob.age);
-} */
+}
 
 //API 9 
 
+async function getProducts() {
+    const data = await fetchData("https://fakestoreapi.com/products");
 
+    const filtered = data.filter(p => p.price > 100);
 
+    const total = filtered.reduce((sum, p) => sum + p.price, 0);
 
-/*
+    console.log("Products:", filtered);
+    console.log("Total Price:", total);
+}
+
 // API 10
 
 async function getTopGainer() {
