@@ -1,0 +1,213 @@
+TODAYS CONCEPTS:
+-Use of async and await functions
+-clearInterval and clearTimeout
+-OOPS Concepts:
+  -Inheritance
+  -Encapsulation
+  -Polymorphism
+  -Abstraction
+
+
+  async():- async function is used to return promises 
+  await():- await function is used to wait till the promise reloves
+  The usage of both the functions are to write the asynchronous code as Synchronous when required
+
+  clearInterval :- We need to set one interval while excecuting the promises, this function is used to clear that interval if needed.
+  clearTimeout :- Same thing , this function is used to clear the timeout function if needed.
+
+  OOPS CONCEPTS:- OOPS is nothing but the way of structuring code using objects and classes 
+                  Instead of writing seperately, we group them: data(properties)
+                                                                behaviour(methods)
+                  Mainly:
+                  class - blue print of an objects
+                          Syntax to create class:
+                             class classname{
+
+                             }
+                  object - Instance of a class
+                           Syntax:-
+                           const obj_name = new className(value1,value2,..)
+                  Constructor - Used to initialize the object
+                           Syntax: Constructor(p1,p2)
+                                   {
+                                    this.p1 = p1;
+                                    this.p2 = p2;
+                                   }
+
+ Example of the usage of class,object and Constructor
+    class home{
+    constructor(name,age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    person()
+    {
+        console.log(`My name is ${this.name} and my age is ${this.age}`)
+    }
+}
+
+const obj1 = new home("vyshu",22);
+const obj2 = new home("phani",23);
+obj1.person();
+obj2.person();
+
+There are mainly 4 concept in OOPS 
+    1) Encapsulation
+    2) Inheritance
+    3)Polymorphism
+    4)Abstraction
+
+ 1) Encapsulation:- Hide the internal details and control how data is accessed or modified.
+                  usage:
+                   Protect data from unwanted changes
+                   Control access using methods
+                   Make code more secure and maintainable 
+    Example:-   
+    class Bank{
+    #balance = 0; //we have declare the private variable like this using #
+    Constructor(){
+        
+    }
+    deposit(amount){
+        if (amount > 0)
+        {
+            this.#balance += amount;
+            console.log(`Amount is deposited to your bank account RS.${amount} and your current balance is ${this.#balance}`);
+            //we have to use # while calling that private variable 
+        }
+        else{
+            console.log("enter postive value");
+        }
+    }
+    withdraw(amount)
+    {
+        if(amount <= this.#balance && amount > 0 )
+        {
+            this.#balance -= amount;
+            console.log(`Amount is deposited from your account RS.${amount} and your current balace is ${this.#balance}`);
+        }
+        else{
+            console.log("Enter positive value.")
+        }
+    }
+}
+
+const obj = new Bank()
+
+obj.deposit(1000);
+obj.withdraw(500);    
+
+2)Inheritance: Inheritance means one class can use the properties and methods of another class
+-we can call base class - Parent class and child class - derived class
+-super() function is most important function, we need this function to call properties and methods from base class
+Usage:
+
+Avoid repeating code
+Reuse existing logic
+Make code cleaner and scalable
+
+Syntax:
+class Parent {
+    constructor() {}
+}
+
+class Child extends Parent {
+    constructor() {
+        super(); // calls parent constructor
+    }
+}
+
+Example code:
+
+class user // parent class
+{
+    constructor(name){
+        this.name = name;
+    }
+    login()
+    {
+        console.log(`Hello ${this.name}, you are logged in`);
+    }
+
+}
+
+class admin extends user // child class
+{
+    constructor(name,role){
+        super(name);
+        this.role = role;
+    }
+    admin()
+    {
+        super.login()//Here we are calling parent class method
+        console.log(`Hello ${this.name} you have admin privilages as ${this.role}`);
+    }
+}
+
+const u1 = new user("vyshu");
+const a1 = new admin("vyshu","project engineer");
+
+u1.login();
+a1.admin()
+
+3) Polymorphism:-Polymorphism means having many forms that means The same method behaves differently depending on the object
+   usage:
+   Makes code flexible
+   Reduces complexity
+   Easy to extend
+   Same method name → cleaner code
+
+   Example:
+   class Shape {
+    draw() {
+        console.log('Drawing a shape');
+    }
+}
+ 
+class Circle extends Shape {
+    draw() {
+        console.log('Drawing a circle');
+    }
+}
+ 
+class Square extends Shape {
+    draw() {
+        console.log('Drawing a square');
+    }
+}
+ 
+const shapes = [new Circle(), new Square()];
+ 
+shapes.forEach(shape => shape.draw());
+
+4) Abstraction:Abstraction means hiding internal details and showing only what is necessary
+   
+   Usage:
+   Hide complexity
+   Improve security
+   Make code easy to use
+   Reduce confusion
+
+   Example: 
+   class CoffeMachine {
+    #waterTemperature = 90;
+ 
+    #boilWater() {
+        return Boiling water to ${this.#waterTemperature} degrees.;
+    }
+ 
+    #grindBeans() {
+        return "Grinding beans.";
+    }
+ 
+    brew() {
+        const boilMessage = this.#boilWater();
+        const grindMessage = this.#grindBeans();
+        return ${boilMessage} ${grindMessage} Brewing coffee.;
+    }
+}
+ 
+const myCoffeMachine = new CoffeMachine();
+console.log(myCoffeMachine.brew());
+
