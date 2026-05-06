@@ -48,4 +48,8 @@ setInterval():- it run the code after every interval of time.
 7.Dog Facts API – Handles nested JSON data and extracts facts properly.
 8.Random User API – Processes user data using age-based filtering and mapping.
 9.Fake Store API – Works with product data using price-based filtering and aggregation.
+<<<<<<< HEAD
 10.CoinGecko API – Analyzes cryptocurrency data using price and market cap operations.
+=======
+10.CoinGecko API – Analyzes cryptocurrency data using price and market cap operations.
+>>>>>>> bf9c4333e7952dc949b2c60bc20c6f0bac8d5733

@@ -6,12 +6,17 @@ function fetchData(link, operation) {
 }
 
 //api1
+<<<<<<< HEAD
 fetchData("https://catfact.ninja/facts",
+=======
+/*fetchData("https://catfact.ninja/facts",
+>>>>>>> bf9c4333e7952dc949b2c60bc20c6f0bac8d5733
     (data) => {
         data.data.forEach(f => {
             console.log(`Cat Fact: ${f.fact}`);
         });
     }
+<<<<<<< HEAD
 )
 /*
 //API 2
@@ -30,6 +35,26 @@ fetchData("https://pokeapi.co/api/v2/pokemon", (data) => {
 
     console.log(result);
 }); 
+=======
+);
+
+//API 2
+function getPokemons() {
+    fetch("https://pokeapi.co/api/v2/pokemon")
+        .then(res => {
+            if (!res.ok) throw new Error("API Error");
+            return res.json();
+        })
+        .then(data => {
+            const sorted = data.results
+                .map(p => p.name)
+                .sort();
+
+            console.log(sorted);
+        })
+        .catch(err => console.log("Error:", err));
+}
+>>>>>>> bf9c4333e7952dc949b2c60bc20c6f0bac8d5733
 
 //API3 - here i fetch the data and log the names by addind the prefixes to that
 fetchData("https://randomuser.me/api/?results=10", (data) => {
@@ -143,4 +168,8 @@ fetchData("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd", (dat
     );
 
     console.log("Top Gainer:", topGainer.name);
+<<<<<<< HEAD
 }); */
+=======
+}); */
+>>>>>>> bf9c4333e7952dc949b2c60bc20c6f0bac8d5733
