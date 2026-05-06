@@ -14,21 +14,22 @@ function fetchData(link, operation) {
     }
 );
 
-fetchData("https://pokeapi.co/api/v2/pokemon", (data) => {
-    const pokemons = data.results;
+//API 2
+function getPokemons() {
+    fetch("https://pokeapi.co/api/v2/pokemon")
+        .then(res => {
+            if (!res.ok) throw new Error("API Error");
+            return res.json();
+        })
+        .then(data => {
+            const sorted = data.results
+                .map(p => p.name)
+                .sort();
 
-    const result = pokemons.map((p, index) => {
-        // Dummy gender logic: even → Mr., odd → Ms.
-        const prefix = index % 2 === 0 ? "Mr." : "Ms.";
-
-        return {
-            ...p,
-            name: `${prefix} ${p.name}`
-        };
-    });
-
-    console.log(result);
-}); 
+            console.log(sorted);
+        })
+        .catch(err => console.log("Error:", err));
+}
 
 //API3 - here i fetch the data and log the names by addind the prefixes to that
 fetchData("https://randomuser.me/api/?results=10", (data) => {
