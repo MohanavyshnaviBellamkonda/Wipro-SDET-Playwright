@@ -36,3 +36,16 @@ If we reolved the data,then data is recieved or if rejected we will get an error
 setTimeout():- it it use to run a code after the few sec later, mention the time in code.
 
 setInterval():- it run the code after every interval of time.
+
+
+----- Practiced API's --------
+1.Cat Facts API – Fetches random cat facts and filters them based on length.
+2.Joke API – Displays jokes by combining setup and punchline.
+3.Pokémon API – Retrieves Pokémon names and applies transformations using map and filter.
+4.Astronauts API – Fetches astronauts currently in space and sorts them by name.
+5.Zen Quotes API – Processes motivational quotes using filter and map.
+6.Universities API – Filters and limits universities data and formats output.
+7.Dog Facts API – Handles nested JSON data and extracts facts properly.
+8.Random User API – Processes user data using age-based filtering and mapping.
+9.Fake Store API – Works with product data using price-based filtering and aggregation.
+10.CoinGecko API – Analyzes cryptocurrency data using price and market cap operations.
