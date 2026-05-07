@@ -52,7 +52,7 @@ const a1 = new admin("vyshu","project engineer");
 u1.login();
 a1.admin()
 
-*/
+
 
 //2)
 
@@ -73,7 +73,7 @@ class Wish extends Name {
     }
 
     greet() {
-        super.name1(); // correct method name
+        super.name1(); 
         console.log(`Hello ${this.name}, ${this.wish}`);
     }
 }
@@ -83,3 +83,38 @@ const g1 = new Wish("vyshu", "you are gorgeous");
 
 n1.name1();
 g1.greet();
+
+
+//3)
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+
+    showColor() {
+        console.log(`Color is ${this.color}`);
+    }
+}
+
+class Rectangle extends Shape {
+    constructor(color, length, width) {
+        super(color);
+        this.length = length;
+        this.width = width;
+    }
+
+    area() {
+        console.log(`Area is ${this.length * this.width}`);
+    }
+
+    showDetails() {
+        console.log(`Color: ${this.color}, Length: ${this.length}, Width: ${this.width}`);
+    }
+}
+
+const r1 = new Rectangle("red", 10, 5);
+
+r1.showColor();    
+r1.area();         
+r1.showDetails();  */
+    
