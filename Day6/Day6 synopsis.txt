@@ -1,0 +1,21 @@
+Questions: 
+    1) Flight parser:
+        - User split() to break strings.
+        - Number() to convert into actual number.
+        - filter() to keep flights with budget range.
+        - sort() for ascending order.
+        - JSON.stringify(): converts js object into JSON format.
+    2) E-Commerce Discount Applicator:
+        - Used map() to update every product.
+        - Used spread operator(...) to copy object properties.
+        - setTimeOut(): to simulate delayed server processing.
+    3) Movie Stream Analytics:
+        - Used split() to separate movie details.
+        - Converting views to number (Number())
+        - filter()
+        - sorting in descending order
+    4)  Automated Payroll Processor:
+        - Used map() to calculate employee salaries
+        - Used ternary operator for tax percentage selection
+        - Used Template Literals for payroll summary logging
+        - Used setTimeout() to simulate delayed payroll processing
