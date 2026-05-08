@@ -207,7 +207,7 @@ const employees = [
 
 ];
 
-*/
+
 const employees = [
   { id: 101, name: "Alice", salary: 6000 },
   { id: 102, name: "Bob", salary: 3500 },
@@ -240,4 +240,40 @@ function calculatePayroll(emp, taxCallback) {
 calculatePayroll(
   employees,
   salary => salary > 5000 ? salary * 0.2 : salary * 0.1
-);
+); */
+
+const employees = [
+    { id: 101, name: "Alice", salary: 6000 },
+    { id: 102, name: "Bob", salary: 3500 },
+    { id: 103, name: "Charlie", salary: 5200 }
+];
+
+function taxLogic(salary) {
+    return salary > 5000 ? 20 : 10;
+}
+
+function calculatePayroll(employees, taxCallback) {
+    employees.forEach((d) => {
+        if (taxCallback(d.salary) === 20) {
+            d.salary -= (d.salary * 0.2);
+        } else {
+            d.salary -= (d.salary * 0.1);
+        }
+
+        if ((d.salary) > 4000) {
+            d.status = "Premium";
+        } else {
+            d.status = "Standard";
+        }
+    })
+
+    let totalNetSalary = employees.reduce((acc, curr) => { return acc + curr.salary }, 0);
+
+    console.log(`Payroll Processed: Total Net Payout is $${totalNetSalary} for ${employees.length} employees.`);
+
+    setTimeout(() => {
+        console.log(employees);
+    }, 2000);
+}
+
+calculatePayroll(employees, taxLogic);

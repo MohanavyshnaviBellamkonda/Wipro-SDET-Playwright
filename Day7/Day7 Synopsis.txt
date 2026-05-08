@@ -1,0 +1,85 @@
+Hoisting: Hoisting means all the declarations are at the top of the scope before the code runs.
+          there is much differece in let hoisting and var hoisting.
+  -There is function hoisting also
+// console.log(greet);
+// let greet = "Hello, World!";
+// console.log(greet);
+ 
+// var greet; --> init -> undefined
+// log()
+// greet = "h W"
+// log()
+ 
+// sayHi();
+// function sayHi() {
+//     console.log('Hello, World!');
+// }
+ 
+// var sayHi = () => {
+//     console.log('Hello');
+// }
+ 
+ 
+// console.log(greet);
+// let greet = "Hello, World!";
+// console.log(greet);
+ 
+// var greet; --> init -> undefined
+// log()
+// greet = "h W"
+// log()
+ 
+// sayHi();
+// function sayHi() {
+//     console.log('Hello, World!');
+// }
+ 
+// var sayHi = () => {
+//     console.log('Hello');
+// }
+
+
+And we discussed about prototypal inheritance again
+
+like what is the difference between normal object and prototypal object and how they access the properties like that 
+
+/ Every object --> Object
+const car = {
+    brand: "Tesla",
+    start: () => console.log("VroomVroom")
+}
+ 
+ 
+function start() {
+    console.log("VroomVroom")
+}
+ 
+const c1 = new start();
+const c2 = new start();
+ 
+start.prototype.stop = function() {
+    console.log("Stop");
+}
+// c1.stop();
+// c2.stop();
+ 
+// car {start} --> prototype {stop}
+// c1 --> start
+// c2 --> start
+// c1.stop();
+ 
+const animal = { eats: true };
+const rabbit = Object.create(animal); // creates a new object rabbit with prototype animal
+rabbit.carrot = () => console.log("He is eating carrot");
+console.log(rabbit.eats); // inherted from animal
+console.log(rabbit.hasOwnProperty('eats'))
+console.log(rabbit.hasOwnProperty('carrot'))
+console.log(rabbit.toString())
+ 
+// console.log(greet);
+// let greet = "Hello, World!";
+// console.log(greet);
+
+REVISED ALL THE TOPICS FROM THE DAY1
+
+Javascript is finished 

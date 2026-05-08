@@ -12,6 +12,25 @@ const cat = new Animal("Whiskers");
 dog.speak();
 cat.speak();
 
+/*
+//class,constructor,Object
+class home{
+    constructor(name,age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    person()
+    {
+        console.log(`My name is ${this.name} and my age is ${this.age}`)
+    }
+}
+
+const obj1 = new home("vyshu",22);
+const obj2 = new home("phani",23);
+obj1.person();
+obj2.person(); 
+
 //Encapsulation
 
 class BankAccount {
