@@ -1,0 +1,63 @@
+ADVANCED JS TOPICS:
+-Default paramaeter :- It is used to return one Defaultvalue when the paramaeter is not passed by the function while calling instead of undefined.
+//Default Parameters
+function welcome(name="guest")
+{
+    console.log(`Welcome ${name}`);
+}
+
+welcome("vyshu");
+welcome("phani");
+welcome() // logs guest
+-spread operator :- (...), by using this spread operator we can have the combined data of 2 or more arrays.
+//Spread Operator
+//Variables
+const nums = [1,2,3,4,5];
+const newnums = [...nums,6,7,8,9,10];
+console.log(newnums);
+
+//objects
+
+const obj = {name:"vyshu", age:22};
+const newobj = {...obj, surname:"bellamkonda"};
+console.log(newobj);
+
+-Rest Operator:-It takes multiple values and packs them into a single array.
+
+//rest operator 
+const cal = { // rest operator
+    sum: (...nums) => nums.reduce((a, b) => a + b, 0), // rest parameters
+}
+
+console.log("\n3. Rest Operator:");
+console.log(cal.sum(1, 2, 43, 4))
+
+-Destructuring -
+
+// destructuring
+// const arr = ["Vyshu", "Phani", "Harshi", "Manu"];
+// const first = arr[0];
+// const second = arr[1];
+// const third = arr[2];
+// const fourth = arr[3];
+
+const [first, second, third, fourth, fifth] = ["Vyshu", "Phani", "Harshi", "Manu"]; // pos-based extraction
+const [one, two, ...three] = [1, 3, 5, 6, 7];
+console.log("\n4. Destructuring:");
+console.log(first, second, third, fourth, fifth);
+console.log(one, two, three)
+
+const { name, age } = {name: "Vyshu", age: 22}; // key-based extracted
+console.log(name, age);
+
+TYPESCRIPT:
+Type script is the superset of javascript.
+
+npm i -g typescript
+tsc --init
+npm install --save-dev tsx
+
+to run 
+npx tsx index.ts
+npm install --save-dev tsx
+npx ts-node index.ts
