@@ -86,7 +86,7 @@ console.log("Coordinates:", coordinates);
 // const numberBag: Bag<number> = {content: 5};
 
 // console.log(stringBag, numberBag);
-*/
+
 class Storage<T> {
     private items: T[] = [];
 
@@ -105,3 +105,18 @@ names.addItems("phani");
 names.addItems("harshi");
 
 console.log(names.getItem(0), names.getItem(1), names.getItem(2), names.getItem(3)); // undefined for index 3
+*/
+//Generics with constraints
+
+interface Haslength {
+    length:number;
+}
+
+//generics with constraints | extends keyword
+function logLength<T extends Haslength >(arg:T) : void {
+    console.log(arg.length);
+}
+
+logLength("Vyshnavi"); //String has length
+logLength([1,2,3,4]); //Array has length
+//logLength(15); // number doesn't have length property which throes an error
