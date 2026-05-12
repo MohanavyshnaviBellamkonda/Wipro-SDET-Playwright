@@ -24,6 +24,8 @@ function getEmp(index: number) {
 addEmp({ id: 10, name: "Vyshu", role: Role.User });
 addEmp({ id: "xyz", name: "Phani", role: Role.User });
 addEmp({ id: 20, name: "Harshi", role: Role.Admin, priviledges: [Priviledge.Read, Priviledge.Write] });
+addEmp({ id: 20, name: "harshi", role: Role.Admin, priviledges: [Priviledge.Read, Priviledge.Write] });
+
 getEmp(0);
 getEmp(1);
 getEmp(2);
