@@ -1,7 +1,7 @@
 // const user = {
 //     id: 21,
-//     name: "Aryan",
-//     age: 25
+//     name: "Vyshu",
+//     age: 22
 // } as const;
 
 // // user.name = "Arush"

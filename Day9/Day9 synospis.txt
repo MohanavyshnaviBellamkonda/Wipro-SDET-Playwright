@@ -101,7 +101,6 @@ Generics in TypeScript allow you to create reusable components/functions/classes
 Instead of writing the same logic multiple times for different types, generics let you write it once.
 
 class Storage<T> {
-    private items: T[] = [];
 
     addItems(item: T): void { // no return type
         this.items.push(item);

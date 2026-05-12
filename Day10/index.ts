@@ -21,9 +21,9 @@ function getEmp(index: number) {
     console.log(list[index]);
 }
 
-addEmp({ id: 10, name: "Aaryan", role: Role.User });
-addEmp({ id: "xyz", name: "Arush", role: Role.User });
-addEmp({ id: 20, name: "Aman", role: Role.Admin, priviledges: [Priviledge.Read, Priviledge.Write] });
+addEmp({ id: 10, name: "Vyshu", role: Role.User });
+addEmp({ id: "xyz", name: "Phani", role: Role.User });
+addEmp({ id: 20, name: "Harshi", role: Role.Admin, priviledges: [Priviledge.Read, Priviledge.Write] });
 getEmp(0);
 getEmp(1);
 getEmp(2);
