@@ -72,22 +72,6 @@ type FolderNode = {
   subFolders?: FolderNode[];
 };
 
-const folder: FolderNode = {
-  name: "Day 10",
-  files: ["omit.ts", "partial.ts"],
-  subFolders: [
-    {
-      name: "Images",
-      files: ["logo.png"],
-    },
-    {
-      name: "Docs",
-      files: ["readme.md"],
-    },
-  ],
-};
-
-console.log(folder);
 5. Template Literal Types for CSS
 Scenario: You are building a UI library and want to strictly enforce unit types for a "spacing" prop.
 Task: Create a type MarginValue that only allows strings ending in "px", "rem", or "vh" (e.g., "10px", "2rem"). Use Template Literal Types to ensure a number must precede the unit.
