@@ -146,3 +146,32 @@ console.log(a);
 let b: NonFormEvents = "keypress";
 console.log(b);
 */
+
+type FolderNode = {
+    name: string;
+    files?: string[];
+    subFolders?: FolderNode[];
+};
+
+const rootFolder: FolderNode = {
+    name: "SDET - PLAWRIGHT",
+
+    files: ["index.html"],
+
+    subFolders: [
+        {
+            name: "Documents",
+
+            files: ["resume.pdf"],
+
+            subFolders: [
+                {
+                    name: "express",
+                    files: ["pic1.png"]
+                }
+            ]
+        }
+    ]
+};
+
+console.log(rootFolder);

@@ -1,5 +1,6 @@
 //Advanced Javascript Concepts
 //Default Parameters
+/*
 function welcome(name="guest")
 {
     console.log(`Welcome ${name}`);
@@ -44,3 +45,8 @@ console.log(one, two, three)
 
 const { name, age } = {name: "Vyshu", age: 22}; // key-based extracted
 console.log(name, age);
+
+*/
+
+
+
