@@ -1,0 +1,9 @@
+-Today we build test cases for amazon website
+-To search for razor in amazon website
+-We tried skip,fail,fixme annotations forsome test cases.
+we discussed about some annotations
+
+1. Skip: This test will not run at all.
+2. Fail: We expect this test to fail. If it passes, Playwright marks it as an error! - we make this manually to be failed, it is shown as passed(ehich is perfect)
+3. Fixme: Similar to skip, but indicates the test is broken and needs updating. - This is also skipped while running
+4. Slow & Timeouts: Triples the default timeout for this specific test. - this will make test run 3X tymss
