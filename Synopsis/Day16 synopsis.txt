@@ -1,0 +1,9 @@
+test.describe():-Groups related test cases into one block/folder.
+
+test.beforeAll():- Runs only once before all test cases start.
+
+test.beforeEach():-Runs before every individual test case.
+
+test.afterEach():-Runs after each and every individual test case finishes.
+
+test.afterAll():Runs only once after all test cases are completed.

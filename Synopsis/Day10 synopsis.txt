@@ -1,0 +1,4 @@
+For express:
+npm init
+npm -y 
+npm i express

@@ -1,0 +1,73 @@
+TODAYS CONCEPTS
+BASICS:
+About Javascript 
+Javascript is an interpreted language which means the code will excecutes in step by step process.
+Javascript is used to make web pages and it is high level language
+
+learnt how to create variables and how to define them 
+-we can create variables using let,const,var and difference between let and var.
+-variable which is created by using var keyword can be accessed from anywhere.
+-let can only accessed in one block only {}
+
+-nodejs is runtime of javascript,where we run all our javascript codes.
+-And javascript is a client side scripting language 
+
+//Operators : Used to perform different tasks.
+
+//Mathematical Operations
+console.log("Add:", a+b);
+console.log("suntraction:", a-b);
+console.log("Multiplication", a*b);
+console.log("Division:", a/b);
+console.log("Remainder:", a%b);
+
+//Logical Operations
+
+// Logical operations --> bool
+console.log("a > b:", a > b); // F
+console.log("a < b:", a < b); // T
+console.log("a == b:", a == b); // F === Strict equality (checks value and type)
+console.log("a != b:", a != b); // T
+console.log("a >= b:", a >= b); // F
+console.log("a <= b:", a <= b); // T
+
+Then some string functions are discussed 
+
+console.log("String:", str); // To print
+console.log("Length of string:", str.length); // findout string length
+console.log("Uppercase:", str.toUpperCase()); // converts to uppercase
+console.log("Lowercase:", str.toLowerCase()); // converts to lowercase
+console.log("Substring (0-5):", str.substring(0, 5)); // to access string from the original string 
+
+
+Objects: objects are stored in the form of key-value pairs 
+
+we can create object like this,
+
+let obj = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+}
+
+
+console.log("Object:", obj); // logs the whole object
+console.log("Name:", obj.name); // logs the name attribute and  value
+console.log("Age:", obj.age); //logs age 
+console.log("City:", obj.city); // log city 
+
+// Loops
+
+-for loop: use when we know the number of iterations need to run
+-while:used to loop with condition 
+-do..while : same like but condition will be checked at the end 
+
+//typeof
+
+It is a most important operator used to check the datatype of variable
+
+str = "vyshu";
+console.log(typeof str);
+
+And we looked into some html pages
+

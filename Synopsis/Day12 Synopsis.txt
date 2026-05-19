@@ -1,0 +1,32 @@
+Today we started leaning playwright:
+playwright:
+Playwright is a browser automation and end-to-end testing framework developed by Microsoft.
+supports asynchronous programming 
+Easy,fast and reliable when compared to selenium
+Supports parellel programming
+
+It is mainly used for:
+
+Web application testing
+API testing
+
+It supports:
+Chromium
+Firefox
+WebKit
+
+and it supports languages like 
+
+JavaScript
+TypeScript
+Python
+Java
+
+we installed playwright by using "npm init playwright@latest"
+excecutes by using  "npx playwright test example.spec.js"
+
+som important functions:
+page.goto()
+locator()
+getByRole()
+expect()
