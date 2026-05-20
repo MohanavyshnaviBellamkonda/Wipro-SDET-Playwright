@@ -1,0 +1,31 @@
+We discussed about the parameterized assertions today,
+
+//paramertized assertions
+In Playwright, parameterized assertions mean running the same assertion logic with multiple sets of data instead of writing separate assertions repeatedly.
+
+It helps reduce duplicate code and makes tests cleaner and easier to maintain.
+
+Example:
+const validations = [
+  { locator: '#message', expected: 'Success' },
+  { locator: '#title', expected: 'Dashboard' },
+  { locator: '#user', expected: 'Admin' }
+];
+
+for (const data of validations) {
+  await expect(page.locator(data.locator)).toContainText(data.expected);
+}
+
+//Soft assertions
+In Playwright, soft assertions allow the test to continue executing even if an assertion fails.
+
+Normally, when a regular assertion fails, the test stops immediately.
+
+expect.soft()
+
+//Polling assertions
+In Playwright, polling assertions are used to repeatedly check a condition until it becomes true or a timeout occurs.
+
+This is useful when data changes dynamically after some delay.
+
+expect.poll()
